@@ -6,7 +6,7 @@ import { LoginPage } from '../pom/LoginPage.js';
 const { Given, When, Then } = createBdd();
 
 // Read Excel once
-const testData = readExcel('./testdata/DSAlgoTestData.xlsx', 'Login');
+const testData = readExcel('./testdata/DSAlgo Data.xlsx', 'Login');
 
 let loginPage;
 
