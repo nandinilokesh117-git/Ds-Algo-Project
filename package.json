@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nandinilokesh117-git/Ds-Algo-Project.git"
@@ -11,7 +13,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/nandinilokesh117-git/Ds-Algo-Project/issues"
   },
@@ -19,5 +21,8 @@
   "devDependencies": {
     "@playwright/test": "^1.57.0",
     "@types/node": "^25.0.10"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
   }
 }

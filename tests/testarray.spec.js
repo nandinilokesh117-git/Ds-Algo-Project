@@ -2,7 +2,8 @@ import { test, expect } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('https://dsportalapp.herokuapp.com/');
-   await page.getByRole('button', { name: 'Get Started' }).click();
+
+  await page.getByRole('button', { name: 'Get Started' }).click();
   await page.getByRole('link', { name: 'Sign in' }).click();
   await page.getByRole('textbox', { name: 'Username:' }).click();
   await page.getByRole('textbox', { name: 'Username:' }).fill('nandini');
@@ -10,14 +11,135 @@ test.beforeEach(async ({ page }) => {
   await page.getByRole('textbox', { name: 'Password:' }).fill('Password@123');
   await page.getByRole('button', { name: 'Login' }).click();
   await page.getByRole('link', { name: 'Get Started' }).nth(1).click();
-  await page.getByRole('link', { name: 'Arrays in Python' }).click();
-  await page.getByRole('link', { name: 'Practice Questions' }).click();
+  //await page.getByRole('link', { name: 'Arrays in Python' }).click();
+  //await page.getByRole('link', { name: 'Practice Questions' }).click();
 });
 
+
+//navigate through homepage sections
+
+test('navigate through homepage sections', async ({ page }) => {  
+const sections = [
+  'data-structures-introduction',
+  'array',
+  'linked-list',
+  'stack',
+  'queue',
+  'tree',
+  'graph'
+];
+
+for (const href of sections) {
+  const link = page.locator(`a[href="${href}"]`);
+  if (await link.isVisible()) {
+    await link.click();
+    await page.waitForLoadState('networkidle'); 
+  }
+   await page.goBack();
+}
+});
+//array in python section link
+test('navigate through array section links', async ({ page }) => {
+  await page.getByRole('link', { name: 'Arrays in Python' }).click();
+  await page.getByRole('link', { name: 'Try here>>>' }).click();
+
+  const editor = page.getByRole('textbox');
+  await editor.focus();
+  await editor.press('Control+A');
+  const pythonCode8 = `my_list = []
+
+my_list.append("milk")
+my_list.append("bread")
+my_list.append("eggs")
+
+print(my_list)`;
+  await editor.fill(pythonCode8);
+  
+  await page.getByRole('button', { name: 'Run' }).click();
+  await expect(page.locator('#output')).toContainText("['milk', 'bread', 'eggs']");
+   const pythonCodeError = `print("Hello World"))`;
+  await editor.focus();
+  await editor.press('Control+A');
+  await editor.fill(pythonCodeError); 
+  page.once('dialog', async dialog => { 
+  expect(dialog.message()).toContain('SyntaxError');
+  await dialog.accept();
+});
+await page.getByRole('button', { name: 'Run' }).click();
+  await page.goBack();
+//array using list link
+  await page.getByRole('link', { name: 'Arrays Using List' }).click();
+  await page.getByRole('link', { name: 'Try here>>>' }).click();
+  await page.getByRole('button', { name: 'Run' }).click();
+  await editor.focus();
+  await editor.press('Control+A');
+  const pythonCode9 = `fruits = ['apple', 'banana', 'cherry']
+fruits.remove('banana')
+print(fruits)`;
+  await editor.fill(pythonCode9);
+  await page.getByRole('button', { name: 'Run' }).click();
+  await expect(page.locator('#output')).toContainText("['apple', 'cherry']");
+   const pythonCodeError1 = `print("Hello World"))`;
+  await editor.focus();
+  await editor.press('Control+A');
+  await editor.fill(pythonCodeError1); 
+  page.once('dialog', async dialog => { 
+  expect(dialog.message()).toContain('SyntaxError');
+  await dialog.accept();
+});
+await page.getByRole('button', { name: 'Run' }).click();
+  await page.goBack();
+//basic operations in list link 
+  await page.getByRole('link', { name: 'Basic Operations in Lists' }).click();
+  await page.getByRole('link', { name: 'Try here>>>' }).click();
+ 
+  await editor.focus();
+  await editor.press('Control+A');
+  const pythonCode10 = `numbers = [1, 2, 3, 4, 5]
+numbers.insert(2, 10)
+print(numbers)`;
+  await editor.fill(pythonCode10);
+  await page.getByRole('button', { name: 'Run' }).click();
+  await expect(page.locator('#output')).toContainText("[1, 2, 10, 3, 4, 5]");
+   const pythonCodeError2 = `print("Hello World"))`;
+  await editor.focus();
+  await editor.press('Control+A');
+  await editor.fill(pythonCodeError2); 
+  page.once('dialog', async dialog => { 
+  expect(dialog.message()).toContain('SyntaxError');
+  await dialog.accept();
+});
+await page.getByRole('button', { name: 'Run' }).click();
+  await page.goBack();
+//applications of array link
+  await page.getByRole('link', { name: 'Applications of Array' }).click();
+  await page.getByRole('link', { name: 'Try here>>>' }).click();
+
+  await editor.focus();
+  await editor.press('Control+A');
+  const pythonCode11 = `def reverse_array(arr):
+    return arr[::-1]
+print(reverse_array([1, 2, 3, 4, 5]))`;
+  await editor.fill(pythonCode11);
+  await page.getByRole('button', { name: 'Run' }).click();
+  await expect(page.locator('#output')).toContainText("[5, 4, 3, 2, 1]");
+   const pythonCodeError3 = `print("Hello World"))`;
+  await editor.focus();
+  await editor.press('Control+A');
+  await editor.fill(pythonCodeError3); 
+  page.once('dialog', async dialog => { 
+  expect(dialog.message()).toContain('SyntaxError');
+  await dialog.accept();
+});
+await page.getByRole('button', { name: 'Run' }).click();
+  
+});
+//array search practice test
 test('array search practice test', async ({ page }) => {
+   await page.getByRole('link', { name: 'Arrays in Python' }).click();
+  await page.getByRole('link', { name: 'Practice Questions' }).click();
 
   await page.getByRole('link', { name: 'Search the array' }).click();
-  //await page.locator('pre').filter({ hasText: 'def search(input_list, num):' }).click();
   const editor = page.getByRole('textbox');
   await editor.focus();
   await editor.press('Control+A');
@@ -35,14 +157,7 @@ print(search([12, 23, 45, 67, 6, 90], 25))   # Not Found`;
   await expect(page.locator('#output')).toContainText('Not Found');
   await page.getByRole('button', { name: 'Submit' }).click();
   await expect(page.getByText('Submission Successful')).toBeVisible();
-    const pythonCode1 = `def search(input_list, num):
-    if num in input_list:
-        return "Element Found"
-    else:
-        return "Not Found"
-# Example usage 
-print(search([12, 23, 45, 67, 6, 90], 12)  # Element Found  
-print(search([12, 23, 45, 67, 6, 90], 25))   # Not Found`;
+    const pythonCode1 = `print("Hello World"))`;
   await editor.focus();
   await editor.press('Control+A');
   await editor.fill(pythonCode1); 
@@ -53,23 +168,16 @@ print(search([12, 23, 45, 67, 6, 90], 25))   # Not Found`;
 await page.getByRole('button', { name: 'Run' }).click();
 await page.getByRole('button', { name: 'Submit' }).click();
 await expect(page.getByText("error occurred during submission")).toBeVisible();
+ await  page.goBack();
 
-
-  
-});
-
-test('array max consecutive ones practice test', async ({ page }) => {  
+//array max consecutive ones practice test
+ 
 
 await page.getByRole('link', { name: 'Max Consecutive Ones' }).click();
 
-/*await page
-  .locator('pre')
-  .filter({ hasText: 'def findMaxConsecutiveOnes(nums)' })
-  .click();*/
-
-const editor = page.getByRole('textbox');
-await editor.focus();
-await editor.press('Control+A');
+const editor1 = page.getByRole('textbox');
+await editor1.focus();
+await editor1.press('Control+A');
 
 const pythonCode2 = `def findMaxConsecutiveOnes(nums):
     max_count = 0
@@ -87,7 +195,7 @@ const pythonCode2 = `def findMaxConsecutiveOnes(nums):
 print(findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1]))
 print(findMaxConsecutiveOnes([1, 0, 1, 1, 0, 1]))`;
 
-await editor.fill(pythonCode2);
+await editor1.fill(pythonCode2);
 
 await page.getByRole('button', { name: 'Run' }).click();
 
@@ -98,22 +206,10 @@ await expect(page.locator('#output')).toContainText('2');
 await page.getByRole('button', { name: 'Submit' }).click();
 await expect(page.getByText('Submission Successful')).toBeVisible();
 
-const pythonCode3 = `def findMaxConsecutiveOnes(nums):
-    max_count = 0
-    current_count = 0 
-    for num in nums:
-        if num == 1:
-            current_count += 1
-            max_count = max(max_count, current_count)
-        else:
-            current_count = 0
-    return max_count
-
-print(findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1])
-print(findMaxConsecutiveOnes([1, 0, 1, 1, 0, 1]))`;
-await editor.focus();
-await editor.press('Control+A');
-await editor.fill(pythonCode3);
+const pythonCode3 = `print("Hello World"))`;
+await editor1.focus();
+await editor1.press('Control+A');
+await editor1.fill(pythonCode3);
 page.once('dialog', async dialog => {
   expect(dialog.message()).toContain('SyntaxError');
   await dialog.accept();
@@ -122,16 +218,14 @@ page.once('dialog', async dialog => {
 await page.getByRole('button', { name: 'Run' }).click();
 await page.getByRole('button', { name: 'Submit' }).click();
 await expect(page.getByText("error occurred during submission")).toBeVisible(); 
+await  page.goBack();
+//find numbers with even number of digits practice test
 
-}); 
-
-test('find numbers with even number of digits practice test', async ({ page }) => {
 
 await page.getByRole('link', { name: 'Find Numbers with Even Number' }).click(); 
-//await page.locator('pre').filter({ hasText: 'def findNumbers(nums):' }).click();
-const editor = page.getByRole('textbox');
-await editor.focus();
-await editor.press('Control+A');
+const editor2 = page.getByRole('textbox');
+await editor2.focus();
+await editor2.press('Control+A');
 const pythonCode4 = `def findNumbers(nums):
     count = 0
     for num in nums:
@@ -140,50 +234,38 @@ const pythonCode4 = `def findNumbers(nums):
     return count
 print(findNumbers([12, 345, 2, 6, 7896]))
 print(findNumbers([555, 901, 482, 1771]))`;
-await editor.fill(pythonCode4);
+await editor2.fill(pythonCode4);
 await page.getByRole('button', { name: 'Run' }).click();
 await page.waitForTimeout(3000);
 await expect(page.locator('#output')).toContainText('2');
 await expect(page.locator('#output')).toContainText('1');
 await page.getByRole('button', { name: 'Submit' }).click();
 await expect(page.getByText('Submission Successful')).toBeVisible();
-const pythonCode5 = `def findNumbers(nums):
-    count = 0
-    for num in nums:
-        if len(str(num)) % 2 == 0:
-            count += 1
-    return count
-print(findNumbers([12, 345, 2, 6, 7896])
-print(findNumbers([555, 901, 482, 1771]))`;
-await editor.focus();
-await editor.press('Control+A');
-await editor.fill(pythonCode5);
+const pythonCode5 = `print("Hello World"))`;
+await editor2.focus();
+await editor2.press('Control+A');
+await editor2.fill(pythonCode5);
 page.once('dialog', async dialog => {
   expect(dialog.message()).toContain('SyntaxError');
   await dialog.accept();
-}
-);
+});
 await page.getByRole('button', { name: 'Run' }).click();
 await page.getByRole('button', { name: 'Submit' }).click();
 await expect(page.getByText("error occurred during submission")).toBeVisible();
-});
+await  page.goBack(); 
+//squares of a sorted array practice test
 
-test('squares of a sorted array practice test', async ({ page }) => {  
 
 await page.getByRole('link', { name: 'Squares of a Sorted Array' }).click();
 
-/*await page
-  .locator('pre')
-  .filter({ hasText: 'def sortedSquares(nums):' })
-  .click();*/
-const editor = page.getByRole('textbox');
-await editor.focus();
-await editor.press('Control+A');
+const editor3 = page.getByRole('textbox');
+await editor3.focus();
+await editor3.press('Control+A');
 const pythonCode6 = `def sortedSquares(nums):
     return sorted([x**2 for x in nums])
 print(sortedSquares([-4, -1, 0, 3, 10]))
 print(sortedSquares([-7, -3, 2, 3, 11]))`;
-await editor.fill(pythonCode6);
+await editor3.fill(pythonCode6);
 await page.getByRole('button', { name: 'Run' }).click();
 
 await page.waitForTimeout(3000);
@@ -191,79 +273,16 @@ await expect(page.locator('#output')).toContainText('[0, 1, 9, 16, 100]');
 await expect(page.locator('#output')).toContainText('[4, 9, 9, 49, 121]');
 await page.getByRole('button', { name: 'Submit' }).click();
 await expect(page.getByText('No tests were collected')).toBeVisible();
-const pythonCode7 = `def sortedSquares(nums):
-    return sorted([x**2 for x in nums])
-print(sortedSquares([-4, -1, 0, 3, 10])
-print(sortedSquares([-7, -3, 2, 3, 11]))`;
-await editor.focus();
-await editor.press('Control+A');
-await editor.fill(pythonCode7);
+const pythonCode7 = `print("Hello World"))`;
+await editor3.focus();
+await editor3.press('Control+A');
+await editor3.fill(pythonCode7);
 page.once('dialog', async dialog => {
   expect(dialog.message()).toContain('SyntaxError');
   await dialog.accept();
-}
-);
+});
 await page.getByRole('button', { name: 'Run' }).click();
 await page.getByRole('button', { name: 'Submit' }).click();
 await expect(page.getByText("No tests were collected")).toBeVisible(); 
-});
+}); 
 
-/*test('array search practice test', async ({ page }) => {
-
-  await page.goto('https://dsportalapp.herokuapp.com/');
-  await page.getByRole('button', { name: 'Get Started' }).click();
-  await page.getByRole('link', { name: 'Sign in' }).click();
-  await page.getByRole('textbox', { name: 'Username:' }).click();
-  await page.getByRole('textbox', { name: 'Username:' }).fill('nandini');
-  await page.getByRole('textbox', { name: 'Password:' }).click();
-  await page.getByRole('textbox', { name: 'Password:' }).fill('Password@123');
-  await page.getByRole('button', { name: 'Login' }).click();
-  await page.getByRole('link', { name: 'Get Started' }).nth(1).click();
-  await page.getByRole('link', { name: 'Arrays in Python' }).click();
-  await page.getByRole('link', { name: 'Practice Questions' }).click();
-  await page.getByRole('link', { name: 'Search the array' }).click();
-
-  await page.locator('pre').filter({ hasText: 'def search(input_list, num):' }).click();
-  await page.getByRole('textbox').clear();
-  const pythonCode = `
-    if num in input_list:
-        return "Element Found"
-    else:
-        return "Not Found"
-
-# Example usage
-print(search([12, 23, 45, 67, 6, 90], 12))   # Element Found
-print(search([12, 23, 45, 67, 6, 90], 25))   # Not Found
-`;
-
-  await page.getByRole('textbox').fill(pythonCode);
-  await page.getByRole('button', { name: 'Run' }).click();
-  await expect(page.getByText('Element Found Not Found')).toBeVisible();
-  await page.getByRole('button', { name: 'Submit' }).click();
-  await expect(page.getByText('Submission Successful')).toBeVisible();
-
-    const pythonCode1 = `
-    if num in input_list:
-        return "Element Found"
-    else:
-        return "Not Found"
-
-# Example usage
-print(search([12, 23, 45, 67, 6, 90], 12)  # Element Found
-print(search([12, 23, 45, 67, 6, 90], 25))   # Not Found
-`;
-  await page.getByRole('textbox').focus();
-  await page.keyboard.press('Control+A');
-  await page.keyboard.press('Backspace');
-  await page.getByRole('textbox').fill(pythonCode1);
-
- page.once('dialog', async dialog => {
-  expect(dialog.message()).toContain('SyntaxError');
-  await dialog.accept();
-});
-
-await page.getByRole('button', { name: 'Run' }).click();
-await page.getByRole('button', { name: 'Submit' }).click();
-await expect(page.getByText("error occurred during submission")).toBeVisible();
-
-});*/
