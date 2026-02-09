@@ -8,16 +8,19 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const excelPath = path.join(__dirname, '../test-data/DSAlgoTestData.xlsx');
 
+
 // Read test data from Excel
 const arrayTestData = readExcel(excelPath, 'ArrayData');
 
-// Get credentials from ArrayData sheet
-const credentialsRow = arrayTestData.find(row => row.TestType === 'Credentials');
-if (!credentialsRow) {
-  throw new Error('Credentials not found in Excel. Please add a row with TestType: Credentials');
+const credentialsData = readExcel(excelPath, 'Login');
+
+// Check if Login sheet has at least 6 rows
+if (!credentialsData || credentialsData.length < 6) {
+  throw new Error(`Login sheet has only ${credentialsData?.length || 0} rows. Row 6 is required. Please add data to row 6.`);
 }
-const username = credentialsRow.Username;
-const password = credentialsRow.Password;
+
+const username = credentialsData[5].Username;
+const password = credentialsData[5].Password; 
 
 test.beforeEach(async ({ page }) => {
   await page.goto('https://dsportalapp.herokuapp.com/');
@@ -29,6 +32,27 @@ test.beforeEach(async ({ page }) => {
   await page.getByRole('textbox', { name: 'Password:' }).fill(password);
   await page.getByRole('button', { name: 'Login' }).click();
   await page.getByRole('link', { name: 'Get Started' }).nth(1).click();
+});
+
+test('navigate through homepage sections', async ({ page }) => {  
+const sections = [
+  'data-structures-introduction',
+  'array',
+  'linked-list',
+  'stack',
+  'queue',
+  'tree',
+  'graph'
+];
+
+for (const href of sections) {
+  const link = page.locator(`a[href="${href}"]`);
+  if (await link.isVisible()) {
+    await link.click();
+    await page.waitForLoadState('networkidle'); 
+  }
+   await page.goBack();
+}
 });
 
 // Single Excel-driven test for array module
