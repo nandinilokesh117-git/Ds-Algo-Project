@@ -151,16 +151,7 @@ Then('the user should see the expected output in console', async ({ page }) => {
   editorPage = new TryEditorPage(page);
   
   if (currentTestData && currentTestData.ExpectedOutput) {
-    // Clean HTML entities from expected output
-    const cleanExpected = currentTestData.ExpectedOutput
-      .replace(/&apos;/g, "'")
-      .replace(/&quot;/g, '"')
-      .replace(/&amp;/g, '&')
-      .replace(/&lt;/g, '<')
-      .replace(/&gt;/g, '>');
-    
-    // Use page.locator directly to avoid HTML entity issues
-    await expect(page.locator('#output')).toContainText(cleanExpected);
+    await expect(page.locator('#output')).toContainText(currentTestData.ExpectedOutput);
   }
 });
 
@@ -289,22 +280,14 @@ When('the user enters valid Python code from Excel row and clicks Run button', a
 
 Then('the user should see output displayed in console', async ({ page }) => {
   if (currentTestData && currentTestData.ExpectedOutput) {
-    // Clean HTML entities
-    const cleanExpected = currentTestData.ExpectedOutput
-      .replace(/&apos;/g, "'")
-      .replace(/&quot;/g, '"')
-      .replace(/&amp;/g, '&')
-      .replace(/&lt;/g, '<')
-      .replace(/&gt;/g, '>');
-    
     // Handle multiple expected outputs (comma-separated)
-    if (cleanExpected.includes(',')) {
-      const outputs = cleanExpected.split(',');
+    if (currentTestData.ExpectedOutput.includes(',')) {
+      const outputs = currentTestData.ExpectedOutput.split(',');
       for (const output of outputs) {
         await expect(page.locator('#output')).toContainText(output.trim());
       }
     } else {
-      await expect(page.locator('#output')).toContainText(cleanExpected);
+      await expect(page.locator('#output')).toContainText(currentTestData.ExpectedOutput);
     }
   }
 });
