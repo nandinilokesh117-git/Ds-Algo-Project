@@ -76,9 +76,6 @@ Then('the user sees the warning password_mismatch: The two password fields didnâ
 });
 
 When('the user clicks the Register button after entering valid username, password, and password confirmation in their respective fields', async ({page}) => {
-  console.log('User name '+ username);
-  console.log('password '+ password);
-  console.log('password_confirm '+ password_confirm);
   await registerPage.fillUsername(username);
   await registerPage.fillPasswordFields(password, password_confirm);
   await registerPage.clickRegisterButton();
