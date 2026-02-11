@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
 import { createBdd } from 'playwright-bdd';
-import { readExcel } from '../utils/excelReader.js';
+import { readExcel } from '../utils/excelreader.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -17,7 +17,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Read Excel data
-const excelPath = path.join(__dirname, '../test-data/DSAlgoTestData.xlsx');
+const excelPath = path.join(__dirname, '../test-data/DSAlgo Data.xlsx');
 const arrayTestData = readExcel(excelPath, 'ArrayData');
 const credentialsData = readExcel(excelPath, 'Login');
 
