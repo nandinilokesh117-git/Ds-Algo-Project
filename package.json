@@ -20,5 +20,8 @@
     "@playwright/test": "^1.57.0",
     "@types/node": "^25.0.10",
     "playwright-bdd": "^8.4.2"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
   }
 }
