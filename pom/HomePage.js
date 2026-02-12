@@ -9,6 +9,19 @@ export class HomePage {
     this.signInLink = page.getByRole('link', { name: 'Sign in' });
     this.dropdown = page.locator('.nav-link.dropdown-toggle');
     this.notLoggedInMsg = page.getByText('You are not logged in');
+    this.getStartedButton = page.locator('a[href="data-structures-introduction"]');
+
+  }
+  async clickRegister() {
+    await this.registerLink.click();
+  }
+
+    async clickgetstarted() {
+    await this.getStartedButton.click();
+  }
+
+  async clickSignInLink() {
+    await this.signInLink.click();
   }
     async navigate() {
     await this.page.goto('https://dsportalapp.herokuapp.com/');

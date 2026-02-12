@@ -1,4 +1,4 @@
-// Generated from: features\Home.feature
+// Generated from: features/Home.feature
 import { test } from "playwright-bdd";
 
 test.describe('Home page access restrictions without login', () => {
@@ -24,7 +24,7 @@ test.describe('Home page access restrictions without login', () => {
 
 test.use({
   $test: [({}, use) => use(test), { scope: 'test', box: true }],
-  $uri: [({}, use) => use('features\\Home.feature'), { scope: 'test', box: true }],
+  $uri: [({}, use) => use('features/Home.feature'), { scope: 'test', box: true }],
   $bddFileData: [({}, use) => use(bddFileData), { scope: "test", box: true }],
 });
 
