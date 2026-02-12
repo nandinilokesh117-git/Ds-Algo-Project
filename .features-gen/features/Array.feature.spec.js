@@ -1,4 +1,4 @@
-// Generated from: features\Array.feature
+// Generated from: features/Array.feature
 import { test } from "playwright-bdd";
 
 test.describe('DS Algo Home Page Navigation and  Array Module', () => {
@@ -212,7 +212,7 @@ test.describe('DS Algo Home Page Navigation and  Array Module', () => {
 
 test.use({
   $test: [({}, use) => use(test), { scope: 'test', box: true }],
-  $uri: [({}, use) => use('features\\Array.feature'), { scope: 'test', box: true }],
+  $uri: [({}, use) => use('features/Array.feature'), { scope: 'test', box: true }],
   $bddFileData: [({}, use) => use(bddFileData), { scope: "test", box: true }],
 });
 
