@@ -4,8 +4,8 @@ import { expect } from '@playwright/test';
 import { Datastructure } from "../pom/Datastructure.js";
 import { HomePage } from "../pom/HomePage.js";
 import { LoginPage } from "../pom/LoginPage.js";
-import { Timecomplexity } from "../pom/Timecomplexity.js";
-import { Tryeditor } from "../pom/Tryeditor.js";
+import { Timecomplexity } from "../pom/TimecomplexityPage.js";
+import { TryEditorPage } from "../pom/TryEditorPage.js";
 import { readExcel } from '../utils/excelReader.js';
 
 const testData = readExcel('test-data/DSAlgo Data.xlsx', 'RegisterData');
@@ -14,7 +14,7 @@ let datastructurePage;
 let signinPage;
 let homePage;
 let timecomplexityPage;
-let tryeditorPage;
+let tryEditorPage;
 let username;
 let password;
 
@@ -85,6 +85,8 @@ When('the user clicks the Try Here button', async ({ page }) => {
     await datastructurePage.clickTimeComplexityButton();
     timecomplexityPage = new Timecomplexity(page);
     timecomplexityPage.clickTryhereButton();
+    tryEditorPage = new TryEditorPage(page);
+    await tryEditorPage.clickRun();
 });
 
 Then('the user should be redirected to a page having a Try Editor with a Run button to test', async ({ page }) => {
@@ -102,8 +104,8 @@ When('the user clicks the Run button without entering code in the editor', async
     await datastructurePage.clickTimeComplexityButton();
     timecomplexityPage = new Timecomplexity(page);
     timecomplexityPage.clickTryhereButton();
-    tryeditorPage = new Tryeditor(page);
-    await tryeditorPage.clickRunButton();
+     tryEditorPage = new TryEditorPage(page);
+    await tryEditorPage.clickRun();
 
 });
 
@@ -127,8 +129,8 @@ When('the user writes invalid Python code in the editor and clicks the Run butto
     timecomplexityPage = new Timecomplexity(page);
     timecomplexityPage.clickTryhereButton();
 
-    tryeditorPage = new Tryeditor(page);
-    await tryeditorPage.clickRunButton();
+    tryEditorPage = new TryEditorPage(page);
+    await tryEditorPage.clickRun();
 
     // Invalid Python code (syntax error)
     await page.locator('.CodeMirror textarea').fill(invalidCode);
@@ -158,8 +160,8 @@ When('the user writes valid Python code in the editor and clicks the Run button'
     timecomplexityPage = new Timecomplexity(page);
     timecomplexityPage.clickTryhereButton();
 
-    tryeditorPage = new Tryeditor(page);
-    await tryeditorPage.clickRunButton();
+    tryEditorPage = new TryEditorPage(page);
+    await tryEditorPage.clickRun();
 
     // Clear the editor first
     await page.evaluate(() => {
