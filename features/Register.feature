@@ -19,7 +19,7 @@ Feature: User Registration functionality
     Then the error Please fill out this field. shows under the password confirmation box
 
     When the user clicks the Register button after entering a username containing space characters and invalid symbols other than digits and @/./+/-/_
-    Then the error Please fill out this field. shows under the Password box
+    Then the error warning message shows under the Password box
 
     When the user clicks the Register button after entering username and mismatched passwords in the password and password confirmation fields
     Then the user sees the warning password_mismatch: The two password fields didn’t match.

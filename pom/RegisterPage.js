@@ -1,4 +1,5 @@
 export class RegisterPage {
+
   constructor(page) {
     this.page = page;
     this.pwdConfirmTextBox = page.locator('input[name="password2"]');
