@@ -4,8 +4,10 @@ import { defineBddConfig } from 'playwright-bdd';
 
 const testDir = defineBddConfig({
   features: 'features/*.feature',
-  steps: 'steps/*.js',
+  steps: 'steps/**/*.js',
+  // ...other playwright-bdd options
 });
+
 
 /**
  * Read environment variables from file.
@@ -19,7 +21,7 @@ const testDir = defineBddConfig({
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-   testDir,
+  testDir,
   //testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -46,12 +48,10 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
-
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
