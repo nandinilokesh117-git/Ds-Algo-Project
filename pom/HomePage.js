@@ -43,6 +43,14 @@ export class HomePage {
   async navigateToSection(hrefValue) {
     await this.page.locator(`a[href="${hrefValue}"]`).click();
   }
+
+  async clickGetStartedForSection(sectionName) {
+    await this.page.locator(`a[href="/${sectionName}"]`).click();
+  }
+
+  async verifyPageURL(expectedURL) {
+    await expect(this.page).toHaveURL(new RegExp(expectedURL));
+  }
     async verifyRegisterAndSignInLinks() {
     await expect(this.registerLink).toBeVisible();
     await expect(this.signInLink).toBeVisible();

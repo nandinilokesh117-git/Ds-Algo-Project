@@ -6,9 +6,9 @@ import { HomePage } from "../pom/HomePage.js";
 import { LoginPage } from "../pom/LoginPage.js";
 import { Timecomplexity } from "../pom/Timecomplexity.js";
 import { Tryeditor } from "../pom/Tryeditor.js";
-import { readExcel } from '../utils/excelreader.js';
+import { readExcel } from '../utils/excelReader.js';
 
-const testData = readExcel('testdata/DSAlgo Data.xlsx', 'RegisterData');
+const testData = readExcel('test-data/DSAlgo Data.xlsx', 'RegisterData');
 
 let datastructurePage;
 let signinPage;
