@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
 import { createBdd } from 'playwright-bdd';
-import { readExcel } from '../utils/excelreader.js';
+import { readExcel } from '../utils/excelReader.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 

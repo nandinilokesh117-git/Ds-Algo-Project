@@ -1,12 +1,12 @@
 import { expect } from '@playwright/test';
 import { createBdd } from 'playwright-bdd';
-import { readExcel } from '../utils/excelreader.js';
+import { readExcel } from '../utils/excelReader.js';
 import { LoginPage } from '../pom/LoginPage.js';
 
 const { Given, When, Then } = createBdd();
 
 // Read Excel once
-const testData = readExcel('./testdata/DSAlgo Data.xlsx', 'Login');
+const testData = readExcel('./test-data/DSAlgo Data.xlsx', 'Login');
 
 let loginPage;
 
