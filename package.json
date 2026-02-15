@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test"
+    "test": "playwright test",
+    "test:login": "playwright test features/Login.feature --project=chromium",
+    "test:register": "playwright test features/Register.feature --project=chromium",
+    "test:home": "playwright test features/Home.feature --project=chromium",
+    "test:array": "playwright test features/Array.feature --project=chromium",
+    "test:datastructure": "playwright test features/Datastructure.feature --project=chromium",
+    "test:all": "playwright test --project=chromium"
   },
   "repository": {
     "type": "git",
