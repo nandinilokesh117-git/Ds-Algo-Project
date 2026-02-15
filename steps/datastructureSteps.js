@@ -117,11 +117,17 @@ Then('the user should see no error message', async ({ page }) => {
 
 When('the user writes invalid Python code in the editor and clicks the Run button', async ({ page }) => {
 
-    const invalidCode = `
-    a = 5
-    b = 10
-    print(a + b)'
-    `;
+    const invalidPythonCode = testData[2].pythoncode;   // 👈 Row 3 invalid code
+    console.log(testData);
+console.log(testData[2].pythoncode);
+
+
+    // const invalidCode = `
+    // a = 5
+    // b = 10
+    // print(a + b)'
+    // `;
+
     homePage = new HomePage(page);
     await homePage.clickgetstarted();
     datastructurePage = new Datastructure(page);
@@ -133,7 +139,7 @@ When('the user writes invalid Python code in the editor and clicks the Run butto
     await tryEditorPage.clickRun();
 
     // Invalid Python code (syntax error)
-    await page.locator('.CodeMirror textarea').fill(invalidCode);
+    await page.locator('.CodeMirror textarea').fill(invalidPythonCode);
     await page.getByRole('button', { name: 'Run' }).click();
 
 });
@@ -162,6 +168,11 @@ When('the user writes valid Python code in the editor and clicks the Run button'
 
     tryEditorPage = new TryEditorPage(page);
     await tryEditorPage.clickRun();
+ 
+    const validPythonCode = testData[1].pythoncode;   // 👈 Read from Excel
+    console.log(testData);
+console.log(testData[1].pythoncode);
+
 
     // Clear the editor first
     await page.evaluate(() => {
@@ -169,19 +180,21 @@ When('the user writes valid Python code in the editor and clicks the Run button'
         editor.setValue('');
     });
 
-    // Type valid Python code
-    const validCode = `
-num1 = 10
-num2 = 15
+//     // Type valid Python code
+//     const validCode = `
+// num1 = 10
+// num2 = 15
 
-# Add two numbers
-sum = num1 + num2
+// # Add two numbers
+// sum = num1 + num2
 
-# Display the sum
-print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
-`.trim();
+// # Display the sum
+// print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+// `.trim();
 
-    await page.locator('.CodeMirror textarea').fill(validCode);
+    validPythonCode.trim(); 
+
+    await page.locator('.CodeMirror textarea').fill(validPythonCode);
     await page.getByRole('button', { name: 'Run' }).click();
 });
 
