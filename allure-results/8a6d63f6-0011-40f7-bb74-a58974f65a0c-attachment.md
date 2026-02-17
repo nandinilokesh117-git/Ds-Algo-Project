@@ -1,0 +1,120 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - heading "QUESTION" [level=2] [ref=e4]:
+      - strong [ref=e5]: QUESTION
+    - generic [ref=e6]:
+      - paragraph [ref=e7]:
+        - text: Given a binary array
+        - code [ref=e8]: nums
+        - text: ", return"
+        - emphasis [ref=e9]: the maximum number of consecutive
+        - code [ref=e10]: "1"
+        - emphasis [ref=e11]: "'s"
+      - paragraph [ref=e12]:
+        - emphasis [ref=e13]: in the array
+        - text: .
+      - paragraph [ref=e14]:
+        - strong [ref=e15]: "Example 1:"
+      - generic [ref=e16]:
+        - strong [ref=e17]: "Input:"
+        - text: nums = [1,1,0,1,1,1]
+        - strong [ref=e18]: "Output:"
+        - text: "3"
+        - strong [ref=e19]: "Explanation:"
+        - text: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
+      - paragraph [ref=e20]:
+        - strong [ref=e21]: "Example 2:"
+      - generic [ref=e22]:
+        - strong [ref=e23]: "Input:"
+        - text: nums = [1,0,1,1,0,1]
+        - strong [ref=e24]: "Output:"
+        - text: "2"
+      - paragraph [ref=e25]:
+        - strong [ref=e26]: "Constraints:"
+      - list [ref=e27]:
+        - listitem [ref=e28]:
+          - code [ref=e29]: 1 <= nums.length <= 105
+        - listitem [ref=e30]:
+          - code [ref=e31]: nums[i]
+          - text: is either
+          - code [ref=e32]: "0"
+          - text: or
+          - code [ref=e33]: "1"
+          - text: .
+  - generic [ref=e35]:
+    - generic [ref=e37]:
+      - textbox [ref=e38]
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - generic [ref=e43]: "1"
+          - text: "def findMaxConsecutiveOnes(nums):"
+        - generic [ref=e45]: "2"
+        - generic [ref=e47]: "3"
+        - generic [ref=e48]:
+          - generic [ref=e49]: "4"
+          - text: max_count = 0
+        - generic [ref=e51]: "5"
+        - generic [ref=e53]: "6"
+        - generic [ref=e54]:
+          - generic [ref=e55]: "7"
+          - text: current_count = 0
+        - generic [ref=e57]: "8"
+        - generic [ref=e59]: "9"
+        - generic [ref=e61]: "10"
+        - generic [ref=e63]: "11"
+        - generic [ref=e65]: "12"
+        - generic [ref=e66]:
+          - generic [ref=e67]: "13"
+          - text: "for num in nums:"
+        - generic [ref=e69]: "14"
+        - generic [ref=e71]: "15"
+        - generic [ref=e72]:
+          - generic [ref=e73]: "16"
+          - text: "if num == 1:"
+        - generic [ref=e75]: "17"
+        - generic [ref=e77]: "18"
+        - generic [ref=e78]:
+          - generic [ref=e79]: "19"
+          - text: current_count += 1
+        - generic [ref=e81]: "20"
+        - generic [ref=e83]: "21"
+        - generic [ref=e84]:
+          - generic [ref=e85]: "22"
+          - text: max_count = max(max_count, current_count)
+        - generic [ref=e87]: "23"
+        - generic [ref=e89]: "24"
+        - generic [ref=e90]:
+          - generic [ref=e91]: "25"
+          - text: "else:"
+        - generic [ref=e93]: "26"
+        - generic [ref=e95]: "27"
+        - generic [ref=e96]:
+          - generic [ref=e97]: "28"
+          - text: current_count = 0
+        - generic [ref=e99]: "29"
+        - generic [ref=e101]: "30"
+        - generic [ref=e103]: "31"
+        - generic [ref=e105]: "32"
+        - generic [ref=e107]: "33"
+        - generic [ref=e108]:
+          - generic [ref=e109]: "34"
+          - text: return max_count
+        - generic [ref=e111]: "35"
+        - generic [ref=e113]: "36"
+        - generic [ref=e115]: "37"
+        - generic [ref=e117]: "38"
+        - generic [ref=e119]: "39"
+        - generic [ref=e120]:
+          - generic [ref=e121]: "40"
+          - text: print(findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1]))
+        - generic [ref=e123]: "41"
+        - generic [ref=e125]: "42"
+        - generic [ref=e126]:
+          - generic [ref=e127]: "43"
+          - text: "print(findMaxConsecutiveOnes([1, 0, 1, 1, 0, 1]))def findMaxConsecutiveOnes(nums) :"
+    - button "Run" [active] [ref=e131] [cursor=pointer]
+    - button "Submit" [ref=e132] [cursor=pointer]
+```
