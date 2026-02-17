@@ -4,7 +4,7 @@ import { expect } from '@playwright/test';
 import { RegisterPage } from "../pom/RegisterPage.js";
 import { HomePage } from '../pom/HomePage.js';
 import { readExcel } from '../utils/excelReader.js';
-import * as allure from 'allure-playwright';   
+  
 
 const testData = readExcel('test-data/DSAlgo Data.xlsx', 'RegisterData');
 

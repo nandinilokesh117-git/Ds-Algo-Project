@@ -1,13 +1,12 @@
 import { createBdd } from "playwright-bdd";
 const { Given, When, Then } = createBdd();
 import { expect } from '@playwright/test';
-import { Datastructure } from "../pom/DatastructurePage.js";
+import { DatastructurePage } from "../pom/DatastructurePage.js";
 import { HomePage } from "../pom/HomePage.js";
 import { LoginPage } from "../pom/LoginPage.js";
 import { Timecomplexity } from "../pom/TimecomplexityPage.js";
 import { TryEditorPage } from "../pom/TryEditorPage.js";
-import { readExcel } from '../utils/excelReader.js';
-import * as allure from 'allure-playwright';   
+import { readExcel } from '../utils/excelReader.js'; 
 
 const testData = readExcel('test-data/DSAlgo Data.xlsx', 'RegisterData');
 
@@ -67,7 +66,7 @@ When('the user clicks the Time Complexity button', async ({ page }) => {
     homePage = new HomePage(page);
     await homePage.clickgetstarted();
 
-    datastructurePage = new Datastructure(page);
+    datastructurePage = new DatastructurePage(page);
     await datastructurePage.clickTimeComplexityButton();
 
 });
@@ -82,7 +81,7 @@ When('the user clicks the Try Here button', async ({ page }) => {
 
     homePage = new HomePage(page);
     await homePage.clickgetstarted();
-    datastructurePage = new Datastructure(page);
+    datastructurePage = new DatastructurePage(page);
     await datastructurePage.clickTimeComplexityButton();
     timecomplexityPage = new Timecomplexity(page);
     timecomplexityPage.clickTryhereButton();
@@ -101,7 +100,7 @@ When('the user clicks the Run button without entering code in the editor', async
 
     homePage = new HomePage(page);
     await homePage.clickgetstarted();
-    datastructurePage = new Datastructure(page);
+    datastructurePage = new DatastructurePage(page);
     await datastructurePage.clickTimeComplexityButton();
     timecomplexityPage = new Timecomplexity(page);
     timecomplexityPage.clickTryhereButton();
@@ -122,7 +121,7 @@ When('the user writes invalid Python code in the editor and clicks the Run butto
 
     homePage = new HomePage(page);
     await homePage.clickgetstarted();
-    datastructurePage = new Datastructure(page);
+    datastructurePage = new DatastructurePage(page);
     await datastructurePage.clickTimeComplexityButton();
     timecomplexityPage = new Timecomplexity(page);
     timecomplexityPage.clickTryhereButton();
@@ -153,7 +152,7 @@ When('the user writes valid Python code in the editor and clicks the Run button'
 
     homePage = new HomePage(page);
     await homePage.clickgetstarted();
-    datastructurePage = new Datastructure(page);
+    datastructurePage = new DatastructurePage(page);
     await datastructurePage.clickTimeComplexityButton();
     timecomplexityPage = new Timecomplexity(page);
     timecomplexityPage.clickTryhereButton();

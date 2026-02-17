@@ -1,4 +1,4 @@
-export class Datastructure{
+export class DatastructurePage {
 
 
     constructor(page) {
