@@ -1,13 +1,12 @@
 import { createBdd } from "playwright-bdd";
 const { Given, When, Then } = createBdd();
 import { expect } from '@playwright/test';
-import { Datastructure } from "../pom/DatastructurePage.js";
+import { DatastructurePage } from "../pom/DatastructurePage.js";
 import { HomePage } from "../pom/HomePage.js";
 import { LoginPage } from "../pom/LoginPage.js";
 import { Timecomplexity } from "../pom/TimecomplexityPage.js";
 import { TryEditorPage } from "../pom/TryEditorPage.js";
 import { readExcel } from '../utils/excelReader.js';
-import * as allure from 'allure-playwright';   
 
 const testData = readExcel('test-data/DSAlgo Data.xlsx', 'RegisterData');
 
@@ -67,7 +66,7 @@ When('the user clicks the Time Complexity button', async ({ page }) => {
     homePage = new HomePage(page);
     await homePage.clickgetstarted();
 
-    datastructurePage = new Datastructure(page);
+    datastructurePage = new DatastructurePage(page);
     await datastructurePage.clickTimeComplexityButton();
 
 });
@@ -82,7 +81,7 @@ When('the user clicks the Try Here button', async ({ page }) => {
 
     homePage = new HomePage(page);
     await homePage.clickgetstarted();
-    datastructurePage = new Datastructure(page);
+    datastructurePage = new DatastructurePage(page);
     await datastructurePage.clickTimeComplexityButton();
     timecomplexityPage = new Timecomplexity(page);
     timecomplexityPage.clickTryhereButton();
@@ -101,7 +100,7 @@ When('the user clicks the Run button without entering code in the editor', async
 
     homePage = new HomePage(page);
     await homePage.clickgetstarted();
-    datastructurePage = new Datastructure(page);
+    datastructurePage = new DatastructurePage(page);
     await datastructurePage.clickTimeComplexityButton();
     timecomplexityPage = new Timecomplexity(page);
     timecomplexityPage.clickTryhereButton();
@@ -118,11 +117,14 @@ Then('the user should see no error message', async ({ page }) => {
 
 When('the user writes invalid Python code in the editor and clicks the Run button', async ({ page }) => {
 
-    const invalidPythonCode = testData[1].pythoncode;   // 👈 Row 3 invalid code
-
+    const invalidCode = `
+    a = 5
+    b = 10
+    print(a + b)'
+    `;
     homePage = new HomePage(page);
     await homePage.clickgetstarted();
-    datastructurePage = new Datastructure(page);
+    datastructurePage = new DatastructurePage(page);
     await datastructurePage.clickTimeComplexityButton();
     timecomplexityPage = new Timecomplexity(page);
     timecomplexityPage.clickTryhereButton();
@@ -131,7 +133,7 @@ When('the user writes invalid Python code in the editor and clicks the Run butto
     await tryEditorPage.clickRun();
 
     // Invalid Python code (syntax error)
-    await page.locator('.CodeMirror textarea').fill(invalidPythonCode);
+    await page.locator('.CodeMirror textarea').fill(invalidCode);
     await page.getByRole('button', { name: 'Run' }).click();
 
 });
@@ -153,7 +155,7 @@ When('the user writes valid Python code in the editor and clicks the Run button'
 
     homePage = new HomePage(page);
     await homePage.clickgetstarted();
-    datastructurePage = new Datastructure(page);
+    datastructurePage = new DatastructurePage(page);
     await datastructurePage.clickTimeComplexityButton();
     timecomplexityPage = new Timecomplexity(page);
     timecomplexityPage.clickTryhereButton();
@@ -161,17 +163,25 @@ When('the user writes valid Python code in the editor and clicks the Run button'
     tryEditorPage = new TryEditorPage(page);
     await tryEditorPage.clickRun();
 
-    const validPythonCode = testData[0].pythoncode;   // 👈 Read from Excel
-
     // Clear the editor first
     await page.evaluate(() => {
         const editor = document.querySelector('.CodeMirror').CodeMirror;
         editor.setValue('');
     });
 
-    validPythonCode.trim(); 
+    // Type valid Python code
+    const validCode = `
+num1 = 10
+num2 = 15
 
-    await page.locator('.CodeMirror textarea').fill(validPythonCode);
+# Add two numbers
+sum = num1 + num2
+
+# Display the sum
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+`.trim();
+
+    await page.locator('.CodeMirror textarea').fill(validCode);
     await page.getByRole('button', { name: 'Run' }).click();
 });
 

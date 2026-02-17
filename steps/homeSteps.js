@@ -1,7 +1,6 @@
 import { expect } from '@playwright/test';
 import { createBdd } from 'playwright-bdd';
 import { HomePage } from '../pom/HomePage.js';
-import * as allure from 'allure-playwright';   
 
 
 
