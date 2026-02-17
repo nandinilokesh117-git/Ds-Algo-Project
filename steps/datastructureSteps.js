@@ -1,7 +1,7 @@
 import { createBdd } from "playwright-bdd";
 const { Given, When, Then } = createBdd();
 import { expect } from '@playwright/test';
-import { Datastructure } from "../pom/Datastructure.js";
+import { Datastructure } from "../pom/DatastructurePage.js";
 import { HomePage } from "../pom/HomePage.js";
 import { LoginPage } from "../pom/LoginPage.js";
 import { Timecomplexity } from "../pom/TimecomplexityPage.js";

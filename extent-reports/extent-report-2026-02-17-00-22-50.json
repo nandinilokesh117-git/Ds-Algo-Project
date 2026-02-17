@@ -1,0 +1,59 @@
+{
+  "total": 6,
+  "passed": 6,
+  "failed": 0,
+  "skipped": 0,
+  "duration": 5950.126,
+  "startTime": "2026-02-17T05:22:45.035Z",
+  "endTime": "2026-02-17T05:22:50.969Z",
+  "tests": [
+    {
+      "title": "Verify that user receives error message for invalid Username field during Login",
+      "status": "passed",
+      "duration": 2284,
+      "error": "",
+      "startTime": "2026-02-17T05:22:46.492Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Login.feature.spec.js"
+    },
+    {
+      "title": "Verify that user receives error message for empty Password field during Login",
+      "status": "passed",
+      "duration": 2391,
+      "error": "",
+      "startTime": "2026-02-17T05:22:46.392Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Login.feature.spec.js"
+    },
+    {
+      "title": "Verify that user receives error message for empty Username field during Login",
+      "status": "passed",
+      "duration": 2298,
+      "error": "",
+      "startTime": "2026-02-17T05:22:46.565Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Login.feature.spec.js"
+    },
+    {
+      "title": "Verify that user receives error message for all empty fields during Login",
+      "status": "passed",
+      "duration": 2396,
+      "error": "",
+      "startTime": "2026-02-17T05:22:46.470Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Login.feature.spec.js"
+    },
+    {
+      "title": "Verify that user is able to land on Home page after entering valid Username and Password fields",
+      "status": "passed",
+      "duration": 1596,
+      "error": "",
+      "startTime": "2026-02-17T05:22:48.781Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Login.feature.spec.js"
+    },
+    {
+      "title": "Verify that user is able to sign out successfully",
+      "status": "passed",
+      "duration": 2062,
+      "error": "",
+      "startTime": "2026-02-17T05:22:48.787Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Login.feature.spec.js"
+    }
+  ]
+}
