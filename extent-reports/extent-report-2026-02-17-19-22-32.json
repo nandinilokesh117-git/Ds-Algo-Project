@@ -1,0 +1,243 @@
+{
+  "total": 29,
+  "passed": 29,
+  "failed": 0,
+  "skipped": 0,
+  "duration": 39571.024,
+  "startTime": "2026-02-17T00:21:53.077Z",
+  "endTime": "2026-02-17T00:22:32.660Z",
+  "tests": [
+    {
+      "title": "Verify navigation to Array data structure page",
+      "status": "passed",
+      "duration": 3701,
+      "error": "",
+      "startTime": "2026-02-17T00:21:54.567Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #2",
+      "status": "passed",
+      "duration": 3822,
+      "error": "",
+      "startTime": "2026-02-17T00:21:54.630Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #3",
+      "status": "passed",
+      "duration": 3859,
+      "error": "",
+      "startTime": "2026-02-17T00:21:54.596Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #1",
+      "status": "passed",
+      "duration": 4241,
+      "error": "",
+      "startTime": "2026-02-17T00:21:54.566Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #4",
+      "status": "passed",
+      "duration": 3070,
+      "error": "",
+      "startTime": "2026-02-17T00:21:58.285Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Verify navigation to Try Editor from Arrays in Python page",
+      "status": "passed",
+      "duration": 3315,
+      "error": "",
+      "startTime": "2026-02-17T00:21:58.454Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Verify execution of invalid Python code in Try Editor",
+      "status": "passed",
+      "duration": 4655,
+      "error": "",
+      "startTime": "2026-02-17T00:21:58.810Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Verify execution of valid Python code in Try Editor",
+      "status": "passed",
+      "duration": 5032,
+      "error": "",
+      "startTime": "2026-02-17T00:21:58.457Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Verify navigation to Practice Questions page",
+      "status": "passed",
+      "duration": 2462,
+      "error": "",
+      "startTime": "2026-02-17T00:22:01.358Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #1",
+      "status": "passed",
+      "duration": 3663,
+      "error": "",
+      "startTime": "2026-02-17T00:22:01.773Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #2",
+      "status": "passed",
+      "duration": 3940,
+      "error": "",
+      "startTime": "2026-02-17T00:22:03.468Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #3",
+      "status": "passed",
+      "duration": 4119,
+      "error": "",
+      "startTime": "2026-02-17T00:22:03.494Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #4",
+      "status": "passed",
+      "duration": 3896,
+      "error": "",
+      "startTime": "2026-02-17T00:22:03.825Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #1",
+      "status": "passed",
+      "duration": 4226,
+      "error": "",
+      "startTime": "2026-02-17T00:22:05.438Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #2",
+      "status": "passed",
+      "duration": 4117,
+      "error": "",
+      "startTime": "2026-02-17T00:22:07.411Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #3",
+      "status": "passed",
+      "duration": 3952,
+      "error": "",
+      "startTime": "2026-02-17T00:22:07.616Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #4",
+      "status": "passed",
+      "duration": 4271,
+      "error": "",
+      "startTime": "2026-02-17T00:22:07.727Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #1",
+      "status": "passed",
+      "duration": 6581,
+      "error": "",
+      "startTime": "2026-02-17T00:22:09.667Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #2",
+      "status": "passed",
+      "duration": 6703,
+      "error": "",
+      "startTime": "2026-02-17T00:22:11.530Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #3",
+      "status": "passed",
+      "duration": 7093,
+      "error": "",
+      "startTime": "2026-02-17T00:22:11.571Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #4",
+      "status": "passed",
+      "duration": 7061,
+      "error": "",
+      "startTime": "2026-02-17T00:22:12.001Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #1",
+      "status": "passed",
+      "duration": 5412,
+      "error": "",
+      "startTime": "2026-02-17T00:22:16.251Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #4",
+      "status": "passed",
+      "duration": 5174,
+      "error": "",
+      "startTime": "2026-02-17T00:22:19.065Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #3",
+      "status": "passed",
+      "duration": 5690,
+      "error": "",
+      "startTime": "2026-02-17T00:22:18.666Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #2",
+      "status": "passed",
+      "duration": 6160,
+      "error": "",
+      "startTime": "2026-02-17T00:22:18.236Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #1",
+      "status": "passed",
+      "duration": 7475,
+      "error": "",
+      "startTime": "2026-02-17T00:22:21.666Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #2",
+      "status": "passed",
+      "duration": 7326,
+      "error": "",
+      "startTime": "2026-02-17T00:22:24.242Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #4",
+      "status": "passed",
+      "duration": 7601,
+      "error": "",
+      "startTime": "2026-02-17T00:22:24.398Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #3",
+      "status": "passed",
+      "duration": 8056,
+      "error": "",
+      "startTime": "2026-02-17T00:22:24.358Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    }
+  ]
+}
