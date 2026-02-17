@@ -7,6 +7,7 @@ import { LoginPage } from "../pom/LoginPage.js";
 import { Timecomplexity } from "../pom/TimecomplexityPage.js";
 import { TryEditorPage } from "../pom/TryEditorPage.js";
 import { readExcel } from '../utils/excelReader.js';
+import * as allure from 'allure-playwright';   
 
 const testData = readExcel('test-data/DSAlgo Data.xlsx', 'RegisterData');
 

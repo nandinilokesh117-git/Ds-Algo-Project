@@ -2,6 +2,8 @@ import { expect } from '@playwright/test';
 import { createBdd } from 'playwright-bdd';
 import { readExcel } from '../utils/excelReader.js';
 import { LoginPage } from '../pom/LoginPage.js';
+import * as allure from 'allure-playwright';   
+
 
 const { Given, When, Then } = createBdd();
 

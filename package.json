@@ -19,8 +19,11 @@
   },
   "homepage": "https://github.com/nandinilokesh117-git/Ds-Algo-Project#readme",
   "devDependencies": {
+    "@cucumber/cucumber": "^12.6.0",
     "@playwright/test": "^1.57.0",
     "@types/node": "^25.0.10",
+    "allure-commandline": "^2.36.0",
+    "allure-playwright": "^3.4.5",
     "playwright-bdd": "^8.4.2"
   },
   "dependencies": {
