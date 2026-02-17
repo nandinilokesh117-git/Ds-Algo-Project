@@ -17,8 +17,12 @@
   },
   "homepage": "https://github.com/nandinilokesh117-git/Ds-Algo-Project#readme",
   "devDependencies": {
-    "@playwright/test": "^1.57.0",
+    "@playwright/test": "^1.58.2",
     "@types/node": "^25.0.10",
+    "allure-playwright": "^3.4.5",
     "playwright-bdd": "^8.4.2"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
   }
 }
