@@ -3,16 +3,16 @@
   "passed": 1,
   "failed": 0,
   "skipped": 0,
-  "duration": 5009.1900000000005,
-  "startTime": "2026-02-17T00:20:47.648Z",
-  "endTime": "2026-02-17T00:20:52.619Z",
+  "duration": 3495.027,
+  "startTime": "2026-02-17T05:23:07.632Z",
+  "endTime": "2026-02-17T05:23:11.108Z",
   "tests": [
     {
       "title": "",
       "status": "passed",
-      "duration": 3057,
+      "duration": 2415,
       "error": "",
-      "startTime": "2026-02-17T00:20:49.389Z",
+      "startTime": "2026-02-17T05:23:08.577Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Register.feature.spec.js"
     }
   ]
