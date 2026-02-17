@@ -3,24 +3,24 @@
   "passed": 2,
   "failed": 0,
   "skipped": 0,
-  "duration": 5623.856,
-  "startTime": "2026-02-17T00:19:36.359Z",
-  "endTime": "2026-02-17T00:19:41.935Z",
+  "duration": 4715.723999999999,
+  "startTime": "2026-02-17T05:22:24.241Z",
+  "endTime": "2026-02-17T05:22:28.933Z",
   "tests": [
     {
       "title": "Verify error message for all Get Started sections without login",
       "status": "passed",
-      "duration": 3709,
+      "duration": 3270,
       "error": "",
-      "startTime": "2026-02-17T00:19:37.963Z",
+      "startTime": "2026-02-17T05:22:25.402Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Home.feature.spec.js"
     },
     {
       "title": "Verify error message for all Data Structure dropdown options without login",
       "status": "passed",
-      "duration": 3834,
+      "duration": 3447,
       "error": "",
-      "startTime": "2026-02-17T00:19:37.929Z",
+      "startTime": "2026-02-17T05:22:25.379Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Home.feature.spec.js"
     }
   ]

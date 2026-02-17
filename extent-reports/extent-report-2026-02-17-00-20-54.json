@@ -3,240 +3,240 @@
   "passed": 29,
   "failed": 0,
   "skipped": 0,
-  "duration": 39571.024,
-  "startTime": "2026-02-17T00:21:53.077Z",
-  "endTime": "2026-02-17T00:22:32.660Z",
+  "duration": 40979.691000000006,
+  "startTime": "2026-02-17T05:20:13.909Z",
+  "endTime": "2026-02-17T05:20:54.871Z",
   "tests": [
     {
       "title": "Verify navigation to Array data structure page",
       "status": "passed",
-      "duration": 3701,
+      "duration": 3633,
       "error": "",
-      "startTime": "2026-02-17T00:21:54.567Z",
-      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
-    },
-    {
-      "title": "Example #2",
-      "status": "passed",
-      "duration": 3822,
-      "error": "",
-      "startTime": "2026-02-17T00:21:54.630Z",
-      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
-    },
-    {
-      "title": "Example #3",
-      "status": "passed",
-      "duration": 3859,
-      "error": "",
-      "startTime": "2026-02-17T00:21:54.596Z",
+      "startTime": "2026-02-17T05:20:15.356Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #1",
       "status": "passed",
-      "duration": 4241,
+      "duration": 3745,
       "error": "",
-      "startTime": "2026-02-17T00:21:54.566Z",
+      "startTime": "2026-02-17T05:20:15.354Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #3",
+      "status": "passed",
+      "duration": 4189,
+      "error": "",
+      "startTime": "2026-02-17T05:20:15.335Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #2",
+      "status": "passed",
+      "duration": 4190,
+      "error": "",
+      "startTime": "2026-02-17T05:20:15.335Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #4",
       "status": "passed",
-      "duration": 3070,
+      "duration": 2802,
       "error": "",
-      "startTime": "2026-02-17T00:21:58.285Z",
+      "startTime": "2026-02-17T05:20:18.996Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Verify navigation to Try Editor from Arrays in Python page",
       "status": "passed",
-      "duration": 3315,
+      "duration": 3166,
       "error": "",
-      "startTime": "2026-02-17T00:21:58.454Z",
-      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
-    },
-    {
-      "title": "Verify execution of invalid Python code in Try Editor",
-      "status": "passed",
-      "duration": 4655,
-      "error": "",
-      "startTime": "2026-02-17T00:21:58.810Z",
-      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
-    },
-    {
-      "title": "Verify execution of valid Python code in Try Editor",
-      "status": "passed",
-      "duration": 5032,
-      "error": "",
-      "startTime": "2026-02-17T00:21:58.457Z",
+      "startTime": "2026-02-17T05:20:19.102Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Verify navigation to Practice Questions page",
       "status": "passed",
-      "duration": 2462,
+      "duration": 2416,
       "error": "",
-      "startTime": "2026-02-17T00:22:01.358Z",
+      "startTime": "2026-02-17T05:20:21.800Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Verify execution of valid Python code in Try Editor",
+      "status": "passed",
+      "duration": 4708,
+      "error": "",
+      "startTime": "2026-02-17T05:20:19.528Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Verify execution of invalid Python code in Try Editor",
+      "status": "passed",
+      "duration": 4764,
+      "error": "",
+      "startTime": "2026-02-17T05:20:19.528Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #1",
       "status": "passed",
-      "duration": 3663,
+      "duration": 3386,
       "error": "",
-      "startTime": "2026-02-17T00:22:01.773Z",
-      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
-    },
-    {
-      "title": "Example #2",
-      "status": "passed",
-      "duration": 3940,
-      "error": "",
-      "startTime": "2026-02-17T00:22:03.468Z",
+      "startTime": "2026-02-17T05:20:22.270Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #3",
       "status": "passed",
-      "duration": 4119,
+      "duration": 4122,
       "error": "",
-      "startTime": "2026-02-17T00:22:03.494Z",
+      "startTime": "2026-02-17T05:20:24.239Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #2",
+      "status": "passed",
+      "duration": 4184,
+      "error": "",
+      "startTime": "2026-02-17T05:20:24.222Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #4",
       "status": "passed",
-      "duration": 3896,
+      "duration": 4519,
       "error": "",
-      "startTime": "2026-02-17T00:22:03.825Z",
+      "startTime": "2026-02-17T05:20:24.294Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #1",
       "status": "passed",
-      "duration": 4226,
+      "duration": 4641,
       "error": "",
-      "startTime": "2026-02-17T00:22:05.438Z",
-      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
-    },
-    {
-      "title": "Example #2",
-      "status": "passed",
-      "duration": 4117,
-      "error": "",
-      "startTime": "2026-02-17T00:22:07.411Z",
+      "startTime": "2026-02-17T05:20:25.657Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #3",
       "status": "passed",
-      "duration": 3952,
+      "duration": 4765,
       "error": "",
-      "startTime": "2026-02-17T00:22:07.616Z",
+      "startTime": "2026-02-17T05:20:28.419Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #2",
+      "status": "passed",
+      "duration": 5282,
+      "error": "",
+      "startTime": "2026-02-17T05:20:28.362Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #4",
       "status": "passed",
-      "duration": 4271,
+      "duration": 4858,
       "error": "",
-      "startTime": "2026-02-17T00:22:07.727Z",
+      "startTime": "2026-02-17T05:20:28.815Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #1",
       "status": "passed",
-      "duration": 6581,
+      "duration": 7174,
       "error": "",
-      "startTime": "2026-02-17T00:22:09.667Z",
+      "startTime": "2026-02-17T05:20:30.300Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #2",
       "status": "passed",
-      "duration": 6703,
+      "duration": 7988,
       "error": "",
-      "startTime": "2026-02-17T00:22:11.530Z",
+      "startTime": "2026-02-17T05:20:33.185Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #3",
       "status": "passed",
-      "duration": 7093,
+      "duration": 7630,
       "error": "",
-      "startTime": "2026-02-17T00:22:11.571Z",
+      "startTime": "2026-02-17T05:20:33.646Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #4",
       "status": "passed",
-      "duration": 7061,
+      "duration": 7735,
       "error": "",
-      "startTime": "2026-02-17T00:22:12.001Z",
+      "startTime": "2026-02-17T05:20:33.675Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #1",
       "status": "passed",
-      "duration": 5412,
+      "duration": 6151,
       "error": "",
-      "startTime": "2026-02-17T00:22:16.251Z",
+      "startTime": "2026-02-17T05:20:37.476Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #4",
       "status": "passed",
-      "duration": 5174,
+      "duration": 4837,
       "error": "",
-      "startTime": "2026-02-17T00:22:19.065Z",
-      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
-    },
-    {
-      "title": "Example #3",
-      "status": "passed",
-      "duration": 5690,
-      "error": "",
-      "startTime": "2026-02-17T00:22:18.666Z",
+      "startTime": "2026-02-17T05:20:41.412Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #2",
       "status": "passed",
-      "duration": 6160,
+      "duration": 5265,
       "error": "",
-      "startTime": "2026-02-17T00:22:18.236Z",
+      "startTime": "2026-02-17T05:20:41.175Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #3",
+      "status": "passed",
+      "duration": 5802,
+      "error": "",
+      "startTime": "2026-02-17T05:20:41.278Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #1",
       "status": "passed",
-      "duration": 7475,
+      "duration": 6626,
       "error": "",
-      "startTime": "2026-02-17T00:22:21.666Z",
+      "startTime": "2026-02-17T05:20:43.628Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #2",
       "status": "passed",
-      "duration": 7326,
+      "duration": 7702,
       "error": "",
-      "startTime": "2026-02-17T00:22:24.242Z",
-      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
-    },
-    {
-      "title": "Example #4",
-      "status": "passed",
-      "duration": 7601,
-      "error": "",
-      "startTime": "2026-02-17T00:22:24.398Z",
+      "startTime": "2026-02-17T05:20:46.251Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     },
     {
       "title": "Example #3",
       "status": "passed",
-      "duration": 8056,
+      "duration": 7680,
       "error": "",
-      "startTime": "2026-02-17T00:22:24.358Z",
+      "startTime": "2026-02-17T05:20:46.442Z",
+      "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
+    },
+    {
+      "title": "Example #4",
+      "status": "passed",
+      "duration": 7632,
+      "error": "",
+      "startTime": "2026-02-17T05:20:47.082Z",
       "location": "C:\\My Code Space\\Ds-Algo-Project\\.features-gen\\features\\Array.feature.spec.js"
     }
   ]
