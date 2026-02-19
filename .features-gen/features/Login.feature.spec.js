@@ -1,4 +1,4 @@
-// Generated from: features/Login.feature
+// Generated from: features\Login.feature
 import { test } from "playwright-bdd";
 
 test.describe('DS Algo Sign In and Sign Out functionality', () => {
@@ -46,7 +46,7 @@ test.describe('DS Algo Sign In and Sign Out functionality', () => {
 
 test.use({
   $test: [({}, use) => use(test), { scope: 'test', box: true }],
-  $uri: [({}, use) => use('features/Login.feature'), { scope: 'test', box: true }],
+  $uri: [({}, use) => use('features\\Login.feature'), { scope: 'test', box: true }],
   $bddFileData: [({}, use) => use(bddFileData), { scope: "test", box: true }],
 });
 

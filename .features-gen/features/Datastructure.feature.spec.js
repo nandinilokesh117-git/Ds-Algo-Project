@@ -1,4 +1,4 @@
-// Generated from: features/Datastructure.feature
+// Generated from: features\Datastructure.feature
 import { test } from "playwright-bdd";
 
 test.describe('Data Structures - Introduction', () => {
@@ -45,7 +45,7 @@ test.describe('Data Structures - Introduction', () => {
 
 test.use({
   $test: [({}, use) => use(test), { scope: 'test', box: true }],
-  $uri: [({}, use) => use('features/Datastructure.feature'), { scope: 'test', box: true }],
+  $uri: [({}, use) => use('features\\Datastructure.feature'), { scope: 'test', box: true }],
   $bddFileData: [({}, use) => use(bddFileData), { scope: "test", box: true }],
 });
 

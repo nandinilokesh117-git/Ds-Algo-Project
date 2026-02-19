@@ -84,7 +84,7 @@ When('the user clicks the Try Here button', async ({ page }) => {
     datastructurePage = new DatastructurePage(page);
     await datastructurePage.clickTimeComplexityButton();
     timecomplexityPage = new Timecomplexity(page);
-    timecomplexityPage.clickTryhereButton();
+    await timecomplexityPage.clickTryhereButton();
     tryEditorPage = new TryEditorPage(page);
     await tryEditorPage.clickRun();
 });
@@ -103,8 +103,8 @@ When('the user clicks the Run button without entering code in the editor', async
     datastructurePage = new DatastructurePage(page);
     await datastructurePage.clickTimeComplexityButton();
     timecomplexityPage = new Timecomplexity(page);
-    timecomplexityPage.clickTryhereButton();
-     tryEditorPage = new TryEditorPage(page);
+    await timecomplexityPage.clickTryhereButton();
+    tryEditorPage = new TryEditorPage(page);
     await tryEditorPage.clickRun();
 
 });
@@ -124,7 +124,7 @@ When('the user writes invalid Python code in the editor and clicks the Run butto
     datastructurePage = new DatastructurePage(page);
     await datastructurePage.clickTimeComplexityButton();
     timecomplexityPage = new Timecomplexity(page);
-    timecomplexityPage.clickTryhereButton();
+    await timecomplexityPage.clickTryhereButton();
 
     tryEditorPage = new TryEditorPage(page);
     await tryEditorPage.clickRun();
@@ -155,7 +155,7 @@ When('the user writes valid Python code in the editor and clicks the Run button'
     datastructurePage = new DatastructurePage(page);
     await datastructurePage.clickTimeComplexityButton();
     timecomplexityPage = new Timecomplexity(page);
-    timecomplexityPage.clickTryhereButton();
+    await timecomplexityPage.clickTryhereButton();
 
     tryEditorPage = new TryEditorPage(page);
     await tryEditorPage.clickRun();

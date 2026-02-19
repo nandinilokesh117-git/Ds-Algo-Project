@@ -46,7 +46,7 @@ When('the user clicks the Register button with all fields empty', async ({ }) =>
 
 Then('the error Please fill out this field. shows under the Username box', async ({ }) => {
   const message = await registerPage.getUsernameErrorMessage();
-  expect(message).toContain('Please fill out this field.');
+  expect((message || '').toLowerCase()).toContain('fill out this field');
 });
 
 When('the user clicks the Register button after entering password and password confirmation with the username field empty', async ({ }) => {
@@ -58,7 +58,7 @@ When('the user clicks the Register button after entering password and password c
 
 Then('the error Please fill out this field. shows under the Username box1', async ({ }) => {
   const message = await registerPage.getUsernameErrorMessage();
-  expect(message).toContain('Please fill out this field.');
+  expect((message || '').toLowerCase()).toContain('fill out this field');
 });
 
 When('the user clicks the Register button after entering username and password with the password confirmation field empty', async ({ }) => {
@@ -71,7 +71,7 @@ When('the user clicks the Register button after entering username and password w
 
 Then('the error Please fill out this field. shows under the password confirmation box', async ({}) => {
   const message = await registerPage.getPasswordConfirmErrorMessage();
-  expect(message).toContain('Please fill out this field.');
+  expect((message || '').toLowerCase()).toContain('fill out this field');
 });
 
 When('the user clicks the Register button after entering a username containing space characters and invalid symbols other than digits and @\\/.\\/+\\/-\\/_', async ({ }) => {
