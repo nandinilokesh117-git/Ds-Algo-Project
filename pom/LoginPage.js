@@ -51,7 +51,18 @@ export class LoginPage {
       el.reportValidity();
       return el.validationMessage;
     });
-    expect(msg).toBe(expectedMessage);
+    const received = (msg || '').toString();
+    const expected = (expectedMessage || '').toString();
+
+    // Normalize and tolerate browser differences for the "fill out this field" message
+    const receivedNorm = received.toLowerCase().replace(/[^a-z\s]/g, '').trim();
+    const expectedNorm = expected.toLowerCase().replace(/[^a-z\s]/g, '').trim();
+
+    if (expectedNorm.includes('fill out this field')) {
+      expect(receivedNorm).toContain('fill out this field');
+    } else {
+      expect(received).toBe(expected);
+    }
   }
 
   async verifyUsernameValidation(expectedMessage) {

@@ -1,4 +1,4 @@
-// Generated from: features/Register.feature
+// Generated from: features\Register.feature
 import { test } from "playwright-bdd";
 
 test.describe('User Registration functionality', () => {
@@ -27,7 +27,7 @@ test.describe('User Registration functionality', () => {
 
 test.use({
   $test: [({}, use) => use(test), { scope: 'test', box: true }],
-  $uri: [({}, use) => use('features/Register.feature'), { scope: 'test', box: true }],
+  $uri: [({}, use) => use('features\\Register.feature'), { scope: 'test', box: true }],
   $bddFileData: [({}, use) => use(bddFileData), { scope: "test", box: true }],
 });
 
